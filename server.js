@@ -18,7 +18,8 @@ dispatcher.onGet("/valid", function(req, res) {
 
 //A sample POST request
 dispatcher.onPost("/error", function(req, res) {
-    nonExistantVariable.method();
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end(nonExistantVariable);
 });
 
 //Create a server
