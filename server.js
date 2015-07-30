@@ -1,12 +1,13 @@
 //Lets require/import the HTTP module
 var http = require('http');
+var dispatcher = require('httpdispatcher');
 
 //Lets define a port we want to listen to
 const PORT=80; 
 
 //We need a function which handles requests and send response
 function handleRequest(request, response){
-    response.end('It Works!! Path Hit: ' + request.url);
+    dispatcher.dispatch(request, response);
 }
 
 //Create a server
