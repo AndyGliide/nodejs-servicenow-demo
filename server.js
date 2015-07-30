@@ -16,9 +16,8 @@ dispatcher.onGet("/valid", function(req, res) {
     res.end('Success');
 });    
 
-//A sample POST request
-dispatcher.onPost("/error", function(req, res) {
-    process.exit(1);
+dispatcher.onGet("/error", function(req, res) {
+    nonexistentFunc();
 });
 
 //Create a server
