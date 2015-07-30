@@ -12,6 +12,7 @@ function handleRequest(request, response){
 
 //A sample GET request    
 dispatcher.onGet("/valid", function(req, res) {
+    console.log('valid request...');
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('Success');
 });    
